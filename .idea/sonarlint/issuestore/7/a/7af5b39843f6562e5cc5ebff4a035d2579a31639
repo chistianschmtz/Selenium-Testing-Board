@@ -1,0 +1,6 @@
+
+R
+squid:S106"9Replace this use of System.out or System.err by a logger.(²Ø…æûÿÿÿÿ
+1squid:S1220""Move this file to a named package.
+hsquid:S00101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ÐÄûÌÿÿÿÿÿ
+lsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÙœÌ—ùÿÿÿÿ
