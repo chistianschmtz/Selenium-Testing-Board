@@ -1,6 +1,12 @@
 
-isquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ÿ†Õ™8ŠÑÂ®È-
-vsquid:S3008"SRename this field "POSTTEXT" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Þ¸©üøÿÿÿÿ8žÛ¢°È-
-W
-squid:S106"9Replace this use of System.out or System.err by a logger.(âžÉ¦8ÞŸŽ°È-
-gsquid:UnusedPrivateMethod…"5Remove this unused private "setChromeOptions" method.(Ý•Ôüÿÿÿÿ8âÏ›ÏÈ-
+tsquid:S3008"SRename this field "POSTTEXT" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Þ¸©üøÿÿÿÿ8³æšÕÈ-
+T
+squid:S106"9Replace this use of System.out or System.err by a logger.(âžÉ¦8¦ßµÕÈ-
+‡squid:S1192"fDefine a constant instead of duplicating this literal "//*[contains(text(),'Einstellungen')]" 3 times.(ûÔ›Àüÿÿÿÿ8¨ª˜ÖÈ-
+Y
+squid:S106"9Replace this use of System.out or System.err by a logger.(‹½ðÿúÿÿÿÿ8¨ª˜ÖÈ-
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ÿ†Õ™8³æšÕÈ-
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ëåáí8³æšÕÈ-
+fsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ÑÐî8Ï¶ÖÈ-
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(àØà¨þÿÿÿÿ8ž±Ÿ×È-
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Å¶œØ8¨ª˜ÖÈ-
