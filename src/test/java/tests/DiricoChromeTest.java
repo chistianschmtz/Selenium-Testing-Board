@@ -1,4 +1,4 @@
-package testing_board;
+package tests;
 
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
