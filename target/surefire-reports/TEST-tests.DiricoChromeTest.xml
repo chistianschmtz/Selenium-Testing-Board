@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="testing_board.DiricoChromeTest" time="80.398" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="tests.DiricoChromeTest" time="73.026" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -18,7 +18,7 @@
     <property name="user.country" value="DE"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="D:\Java\appserver\jdk\jre\bin"/>
-    <property name="sun.java.command" value="C:\Users\csc\AppData\Local\Temp\surefire5101335081575184335\surefirebooter3740464679379356747.jar C:\Users\csc\AppData\Local\Temp\surefire5101335081575184335 2019-08-15T14-55-38_861-jvmRun1 surefire126270873666942005tmp surefire_08596134988576603171tmp"/>
+    <property name="sun.java.command" value="C:\Users\csc\AppData\Local\Temp\surefire8303747739231241624\surefirebooter6217808632532990530.jar C:\Users\csc\AppData\Local\Temp\surefire8303747739231241624 2019-08-15T15-17-44_922-jvmRun1 surefire7274483048779364580tmp surefire_01697408177814099071tmp"/>
     <property name="surefire.test.class.path" value="C:\Users\csc\Dropbox\247Grad\Selenium-Testing-Board\target\test-classes;C:\Users\csc\Dropbox\247Grad\Selenium-Testing-Board\target\classes;C:\Entwicklung\.m2\org\junit\jupiter\junit-jupiter-api\5.5.1\junit-jupiter-api-5.5.1.jar;C:\Entwicklung\.m2\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Entwicklung\.m2\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Entwicklung\.m2\org\junit\platform\junit-platform-commons\1.5.1\junit-platform-commons-1.5.1.jar;C:\Entwicklung\.m2\org\junit\jupiter\junit-jupiter-engine\5.5.1\junit-jupiter-engine-5.5.1.jar;C:\Entwicklung\.m2\org\junit\platform\junit-platform-engine\1.5.1\junit-platform-engine-1.5.1.jar;C:\Entwicklung\.m2\org\seleniumhq\selenium\selenium-java\3.141.59\selenium-java-3.141.59.jar;C:\Entwicklung\.m2\org\seleniumhq\selenium\selenium-api\3.141.59\selenium-api-3.141.59.jar;C:\Entwicklung\.m2\org\seleniumhq\selenium\selenium-chrome-driver\3.141.59\selenium-chrome-driver-3.141.59.jar;C:\Entwicklung\.m2\org\seleniumhq\selenium\selenium-edge-driver\3.141.59\selenium-edge-driver-3.141.59.jar;C:\Entwicklung\.m2\org\seleniumhq\selenium\selenium-firefox-driver\3.141.59\selenium-firefox-driver-3.141.59.jar;C:\Entwicklung\.m2\org\seleniumhq\selenium\selenium-ie-driver\3.141.59\selenium-ie-driver-3.141.59.jar;C:\Entwicklung\.m2\org\seleniumhq\selenium\selenium-opera-driver\3.141.59\selenium-opera-driver-3.141.59.jar;C:\Entwicklung\.m2\org\seleniumhq\selenium\selenium-remote-driver\3.141.59\selenium-remote-driver-3.141.59.jar;C:\Entwicklung\.m2\org\seleniumhq\selenium\selenium-safari-driver\3.141.59\selenium-safari-driver-3.141.59.jar;C:\Entwicklung\.m2\org\seleniumhq\selenium\selenium-support\3.141.59\selenium-support-3.141.59.jar;C:\Entwicklung\.m2\net\bytebuddy\byte-buddy\1.8.15\byte-buddy-1.8.15.jar;C:\Entwicklung\.m2\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Entwicklung\.m2\com\google\guava\guava\25.0-jre\guava-25.0-jre.jar;C:\Entwicklung\.m2\com\google\code\findbugs\jsr305\1.3.9\jsr305-1.3.9.jar;C:\Entwicklung\.m2\org\checkerframework\checker-compat-qual\2.0.0\checker-compat-qual-2.0.0.jar;C:\Entwicklung\.m2\com\google\errorprone\error_prone_annotations\2.1.3\error_prone_annotations-2.1.3.jar;C:\Entwicklung\.m2\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar;C:\Entwicklung\.m2\org\codehaus\mojo\animal-sniffer-annotations\1.14\animal-sniffer-annotations-1.14.jar;C:\Entwicklung\.m2\com\squareup\okhttp3\okhttp\3.11.0\okhttp-3.11.0.jar;C:\Entwicklung\.m2\com\squareup\okio\okio\1.14.0\okio-1.14.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\csc"/>
@@ -31,7 +31,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\csc\AppData\Local\Temp\surefire5101335081575184335\surefirebooter3740464679379356747.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\csc\AppData\Local\Temp\surefire8303747739231241624\surefirebooter6217808632532990530.jar"/>
     <property name="sun.boot.class.path" value="D:\Java\appserver\jdk\jre\lib\resources.jar;D:\Java\appserver\jdk\jre\lib\rt.jar;D:\Java\appserver\jdk\jre\lib\sunrsasign.jar;D:\Java\appserver\jdk\jre\lib\jsse.jar;D:\Java\appserver\jdk\jre\lib\jce.jar;D:\Java\appserver\jdk\jre\lib\charsets.jar;D:\Java\appserver\jdk\jre\lib\jfr.jar;D:\Java\appserver\jdk\jre\classes"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -61,5 +61,5 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="52.0"/>
   </properties>
-  <testcase name="main" classname="testing_board.DiricoChromeTest" time="80.394"/>
+  <testcase name="main" classname="tests.DiricoChromeTest" time="73.021"/>
 </testsuite>

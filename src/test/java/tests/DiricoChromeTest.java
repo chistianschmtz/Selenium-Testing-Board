@@ -9,6 +9,8 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -180,7 +182,12 @@ class DiricoChromeTest {
   @Test
   void main() {
     boolean testResult = false;
-    System.setProperty("webdriver.chrome.driver", "C:\\Users\\csc\\Dropbox\\247Grad\\Selenium-Testing-Board\\chromedriver.exe");
+//    System.setProperty("webdriver.chrome.driver", "C:\\Users\\csc\\Dropbox\\247Grad\\Selenium-Testing-Board\\chromedriver.exe");
+    try {
+      System.setProperty("webdriver.chrome.driver", new File("./src/main/java/resources/chromedriver.exe").getCanonicalPath());
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
 
     ChromeOptions options = setChromeOptions();
     ChromeDriver chromeDriver = new ChromeDriver(options);

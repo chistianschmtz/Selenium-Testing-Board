@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
-Test set: testing_board.DiricoChromeTest
+Test set: tests.DiricoChromeTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 80.398 s - in testing_board.DiricoChromeTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 73.026 s - in tests.DiricoChromeTest
