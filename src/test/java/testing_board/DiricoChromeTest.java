@@ -12,107 +12,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class DiricoChromeTest {
 
   private static final String CLICKARGUMENT = "arguments[0].click();";
   private static String POSTTEXT = "Test-Beitrag";
-
-  @Test
-  void main() {
-
-    System.setProperty("webdriver.chrome.driver", "C:\\Users\\csc\\Dropbox\\247Grad\\Selenium-Testing-Board\\chromedriver.exe");
-
-    ChromeOptions options = setChromeOptions();
-    ChromeDriver chromeDriver = new ChromeDriver(options);
-    chromeDriver.get("https://www.dirico.io/");
-
-    WebElement login = (new WebDriverWait(chromeDriver, 15))
-      .until(ExpectedConditions.presenceOfElementLocated(By.linkText("LOGIN")));
-    login.click();
-
-    WebElement userName = (new WebDriverWait(chromeDriver, 15))
-      .until(ExpectedConditions.presenceOfElementLocated(By.name("username")));
-    userName.click();
-    userName.sendKeys("christian.schmtz@outlook.de");
-
-    WebElement password = (new WebDriverWait(chromeDriver, 15))
-      .until(ExpectedConditions.presenceOfElementLocated(By.name("Password")));
-    password.click();
-    password.sendKeys("Il@yda1993");
-
-    WebElement loginBtn = (new WebDriverWait(chromeDriver, 15))
-      .until(ExpectedConditions.presenceOfElementLocated(By.name("button")));
-    loginBtn.click();
-
-//    WebElement popUp = (new WebDriverWait(chromeDriver, 10))
-//      .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//button[text()='Ok']")));
-//    popUp.click();
-
-    //Status
-    createNewFbContent(chromeDriver);
-    setFbChannel(chromeDriver);
-    addStatusPost(chromeDriver);
-    publishContent(chromeDriver);
-
-    //Image
-    if (isPublished(chromeDriver)) {
-      createNewFbContent(chromeDriver);
-      setFbChannel(chromeDriver);
-      addImagePost(chromeDriver);
-      publishMediaContent(chromeDriver);
-    }
-
-    //Video
-    if (isPublished(chromeDriver)) {
-      createNewFbContent(chromeDriver);
-      setFbChannel(chromeDriver);
-      addVideoPost(chromeDriver);
-      publishMediaContent(chromeDriver);
-    }
-//    //----------------------------------------------------------------------------------------------------------------
-//    //Facebook checken
-//
-    ChromeDriver chromeDriverFb = new ChromeDriver(options);
-    chromeDriverFb.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-    chromeDriverFb.get("https://www.facebook.de/");
-
-    WebElement usernameFb = chromeDriverFb.findElement(By.xpath("//input[@id='email']"));
-    usernameFb.click();
-    usernameFb.sendKeys("christian.schmtz@outlook.de");
-
-    chromeDriverFb.manage().timeouts().setScriptTimeout(1, TimeUnit.SECONDS);
-
-    WebElement passwordFb = chromeDriverFb.findElement(By.xpath("//input[@id='pass']"));
-    passwordFb.click();
-    passwordFb.sendKeys("Il@yda1993");
-    passwordFb.sendKeys(Keys.RETURN);
-
-    WebElement projectDirico = (new WebDriverWait(chromeDriverFb, 10))
-      .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[contains(text(),'Dirico_Testprojekt')]")));
-    chromeDriverFb.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-    chromeDriverFb.executeScript(CLICKARGUMENT, projectDirico);
-
-    WebElement posts = (new WebDriverWait(chromeDriverFb, 10))
-      .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//span[@class='_2yav'][contains(text(),'Beiträge')]")));
-    chromeDriverFb.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-    chromeDriverFb.executeScript(CLICKARGUMENT, posts);
-
-    WebElement result = (new WebDriverWait(chromeDriverFb, 15))
-      .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(),'" + POSTTEXT + "')]")));
-    System.out.println("Testlauf erfolgreich: " + result.getText());
-//
-//
-////-----------------------Löschen---------------------------------------------------------------------------
-//    deletePost(chromeDriverFb, "//a[@id='u_fetchstream_3_18']");
-//    deletePost(chromeDriverFb, "//a[@id='u_fetchstream_3_d']");
-//    deletePost(chromeDriverFb, "//a[@id='u_0_1s']");
-//    deletePost(chromeDriverFb);
-
-    chromeDriver.close();
-    chromeDriverFb.close();
-  }
 
   private static void deletePost(ChromeDriver chromeDriverFb) {
     List<WebElement> deleteResultMenu = (new WebDriverWait(chromeDriverFb, 180))
@@ -131,7 +34,6 @@ class DiricoChromeTest {
       System.out.println("Post gelöscht!");
     }
   }
-
 
   private static void publishContent(ChromeDriver chromeDriver) {
     WebElement immediatleyPublish = (new WebDriverWait(chromeDriver, 10))
@@ -273,5 +175,110 @@ class DiricoChromeTest {
       .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(),'Veröffentlicht')]")));
 
     return publishedTrue.isDisplayed();
+  }
+
+  @Test
+  void main() {
+    boolean testResult = false;
+    System.setProperty("webdriver.chrome.driver", "C:\\Users\\csc\\Dropbox\\247Grad\\Selenium-Testing-Board\\chromedriver.exe");
+
+    ChromeOptions options = setChromeOptions();
+    ChromeDriver chromeDriver = new ChromeDriver(options);
+    chromeDriver.get("https://www.dirico.io/");
+
+    try {
+      WebElement login = (new WebDriverWait(chromeDriver, 15))
+        .until(ExpectedConditions.presenceOfElementLocated(By.linkText("LOGIN")));
+      login.click();
+
+      WebElement userName = (new WebDriverWait(chromeDriver, 15))
+        .until(ExpectedConditions.presenceOfElementLocated(By.name("username")));
+      userName.click();
+      userName.sendKeys("christian.schmtz@outlook.de");
+
+      WebElement password = (new WebDriverWait(chromeDriver, 15))
+        .until(ExpectedConditions.presenceOfElementLocated(By.name("Password")));
+      password.click();
+      password.sendKeys("Il@yda1993");
+
+      WebElement loginBtn = (new WebDriverWait(chromeDriver, 15))
+        .until(ExpectedConditions.presenceOfElementLocated(By.name("button")));
+      loginBtn.click();
+
+//    WebElement popUp = (new WebDriverWait(chromeDriver, 10))
+//      .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//button[text()='Ok']")));
+//    popUp.click();
+
+      //Status
+      createNewFbContent(chromeDriver);
+      setFbChannel(chromeDriver);
+      addStatusPost(chromeDriver);
+      publishContent(chromeDriver);
+
+      //Image
+      if (isPublished(chromeDriver)) {
+        createNewFbContent(chromeDriver);
+        setFbChannel(chromeDriver);
+        addImagePost(chromeDriver);
+        publishMediaContent(chromeDriver);
+      }
+
+      //Video
+      if (isPublished(chromeDriver)) {
+        createNewFbContent(chromeDriver);
+        setFbChannel(chromeDriver);
+        addVideoPost(chromeDriver);
+        publishMediaContent(chromeDriver);
+      }
+//    //----------------------------------------------------------------------------------------------------------------
+//    //Facebook checken
+//
+      ChromeDriver chromeDriverFb = new ChromeDriver(options);
+      chromeDriverFb.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+      chromeDriverFb.get("https://www.facebook.de/");
+
+      WebElement usernameFb = chromeDriverFb.findElement(By.xpath("//input[@id='email']"));
+      usernameFb.click();
+      usernameFb.sendKeys("christian.schmtz@outlook.de");
+
+      chromeDriverFb.manage().timeouts().setScriptTimeout(1, TimeUnit.SECONDS);
+
+      WebElement passwordFb = chromeDriverFb.findElement(By.xpath("//input[@id='pass']"));
+      passwordFb.click();
+      passwordFb.sendKeys("Il@yda1993");
+      passwordFb.sendKeys(Keys.RETURN);
+
+      WebElement projectDirico = (new WebDriverWait(chromeDriverFb, 10))
+        .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[contains(text(),'Dirico_Testprojekt')]")));
+      chromeDriverFb.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+      chromeDriverFb.executeScript(CLICKARGUMENT, projectDirico);
+
+      WebElement posts = (new WebDriverWait(chromeDriverFb, 10))
+        .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//span[@class='_2yav'][contains(text(),'Beiträge')]")));
+      chromeDriverFb.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+      chromeDriverFb.executeScript(CLICKARGUMENT, posts);
+
+      WebElement result = (new WebDriverWait(chromeDriverFb, 15))
+        .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(),'" + POSTTEXT + "')]")));
+//      System.out.println("Testlauf erfolgreich: " + result.getText());
+//
+//
+////-----------------------Löschen---------------------------------------------------------------------------
+//    deletePost(chromeDriverFb, "//a[@id='u_fetchstream_3_18']");
+//    deletePost(chromeDriverFb, "//a[@id='u_fetchstream_3_d']");
+//    deletePost(chromeDriverFb, "//a[@id='u_0_1s']");
+//    deletePost(chromeDriverFb);
+
+      chromeDriver.close();
+      chromeDriverFb.close();
+      if (result.getText().equals(
+        POSTTEXT
+      )) {
+        testResult = true;
+      }
+      assert testResult;
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
   }
 }

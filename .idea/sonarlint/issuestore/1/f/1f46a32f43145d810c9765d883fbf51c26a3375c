@@ -1,12 +1,2 @@
 
-vsquid:S3008"SRename this field "POSTTEXT" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Þ¸©üøÿÿÿÿ8˜Àâ¢É-
-\
-squid:S106ƒ"9Replace this use of System.out or System.err by a logger.(‹½ðÿúÿÿÿÿ8Šèì¢É-
-hsquid:CommentedOutCodeLinel"<This block of commented-out lines of code should be removed.(ÑÐî8Šèì¢É-
-Šsquid:S1192™"fDefine a constant instead of duplicating this literal "//*[contains(text(),'Einstellungen')]" 3 times.(ûÔ›Àüÿÿÿÿ8Šèì¢É-
-V
-squid:S106h"9Replace this use of System.out or System.err by a logger.(âžÉ¦8Šèì¢É-
-isquid:CommentedOutCodeLine2"<This block of commented-out lines of code should be removed.(Ëåáí8Šèì¢É-
-jsquid:CommentedOutCodeLineÛ"<This block of commented-out lines of code should be removed.(Å¶œØ8Šèì¢É-
-nsquid:CommentedOutCodeLinew"<This block of commented-out lines of code should be removed.(àØà¨þÿÿÿÿ8Šèì¢É-
-[squid:UnusedPrivateMethodu"/Remove this unused private "deletePost" method.(íÿÌ¹8­Ô…£É-
+Psquid:S2699"-Add at least one assertion to this test case.(äï‚«ÿÿÿÿÿ8ãƒÞ£É-
