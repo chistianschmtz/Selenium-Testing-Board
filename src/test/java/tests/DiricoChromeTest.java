@@ -21,16 +21,15 @@ class DiricoChromeTest {
 
   private static void deletePost(ChromeDriver chromeDriverFb) {
     List<WebElement> deleteResultMenu = (new WebDriverWait(chromeDriverFb, 180))
-//      .until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//*[contains(@id,'fetchstream')]")));
-      .until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.cssSelector("[id$=uiPopover]")));
+      .until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//*[contains(@data-testid,'post_chevron_button')]")));
     for (int i = 0; i < deleteResultMenu.size(); i++) {
-      chromeDriverFb.executeScript(CLICKARGUMENT, deleteResultMenu);
+      chromeDriverFb.executeScript(CLICKARGUMENT, deleteResultMenu.get(i));
 
       WebElement delete = (new WebDriverWait(chromeDriverFb, 10))
         .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(),'Von der Seite entfernen')]")));
       chromeDriverFb.executeScript(CLICKARGUMENT, delete);
 
-      WebElement deleteFinally = (new WebDriverWait(chromeDriverFb, 10))
+      WebElement deleteFinally = (new WebDriverWait(chromeDriverFb, 20))
         .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@name='ok']")));
       chromeDriverFb.executeScript(CLICKARGUMENT, deleteFinally);
       System.out.println("Post gelöscht!");
@@ -193,7 +192,7 @@ class DiricoChromeTest {
     ChromeDriver chromeDriver = new ChromeDriver(options);
     chromeDriver.get("https://www.dirico.io/");
 
-    try {
+//    try {
       WebElement login = (new WebDriverWait(chromeDriver, 15))
         .until(ExpectedConditions.presenceOfElementLocated(By.linkText("LOGIN")));
       login.click();
@@ -267,25 +266,22 @@ class DiricoChromeTest {
 
       WebElement result = (new WebDriverWait(chromeDriverFb, 15))
         .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(),'" + POSTTEXT + "')]")));
-//      System.out.println("Testlauf erfolgreich: " + result.getText());
-//
-//
+
 ////-----------------------Löschen---------------------------------------------------------------------------
-//    deletePost(chromeDriverFb, "//a[@id='u_fetchstream_3_18']");
-//    deletePost(chromeDriverFb, "//a[@id='u_fetchstream_3_d']");
-//    deletePost(chromeDriverFb, "//a[@id='u_0_1s']");
+
 //    deletePost(chromeDriverFb);
 
-      chromeDriver.close();
-      chromeDriverFb.close();
       if (result.getText().equals(
         POSTTEXT
       )) {
         testResult = true;
+        assert testResult;
       }
-      assert testResult;
-    } catch (Exception e) {
-      e.printStackTrace();
-    }
+
+//    } catch (Exception e) {
+//      e.printStackTrace();
+//    }
+//    chromeDriver.close();
+//    chromeDriverFb.close();
   }
 }
