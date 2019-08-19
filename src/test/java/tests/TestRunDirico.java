@@ -26,8 +26,9 @@ import java.util.concurrent.TimeUnit;
 
 public class TestRunDirico {
   private static final String CLICKARGUMENT = "arguments[0].click();";
-  private static String POSTTEXT = "Test-Beitrag";
-  WebDriver driver;
+  private static String POSTTEXT = "Test";
+  private WebDriver driver;
+
   @Rule
   public final TestRule watchman = new TestWatcher() {
     @Override
@@ -144,7 +145,6 @@ public class TestRunDirico {
       .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//span[contains(text(),'Sofort veröffentlichen?')]")));
     chromeDriver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
     chromeDriver.executeScript(CLICKARGUMENT, immediatleyPublish);
-
     chromeDriver.executeScript("window.scrollTo(0, document.body.scrollHeight)");
 
     WebElement publish = (new WebDriverWait(chromeDriver, 10))
@@ -164,7 +164,6 @@ public class TestRunDirico {
       .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//span[contains(text(),'Sofort veröffentlichen?')]")));
     chromeDriver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
     chromeDriver.executeScript(CLICKARGUMENT, immediatleyPublish);
-
     chromeDriver.executeScript("window.scrollTo(0, document.body.scrollHeight)");
 
     WebElement publish = (new WebDriverWait(chromeDriver, 10))

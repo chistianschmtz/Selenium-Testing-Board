@@ -2,8 +2,8 @@ package tests;
 
 import org.junit.Before;
 import org.junit.Rule;
+import org.junit.Test;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
 import org.junit.rules.TestRule;
 import org.junit.rules.TestWatcher;
 import org.junit.runner.Description;
@@ -22,14 +22,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import javax.swing.*;
 import java.io.File;
 import java.io.IOException;
-import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 
 public class TestRunFacebook {
   private static final String CLICKARGUMENT = "arguments[0].click();";
-  private static String POSTTEXT = "Test-Beitrag";
-  ChromeDriver driver;
+  private ChromeDriver driver;
 
   @Rule
   public final TestRule watchman = new TestWatcher() {
@@ -74,7 +72,7 @@ public class TestRunFacebook {
 
   @DisplayName("Selenium Facebook Test")
   @Test
-  void main() throws Exception {
+  public void testFacebook() throws Exception {
 
     WebElement usernameFb = driver.findElement(By.xpath("//input[@id='email']"));
     usernameFb.click();
@@ -96,35 +94,33 @@ public class TestRunFacebook {
       .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//span[@class='_2yav'][contains(text(),'Beiträge')]")));
     driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
     driver.executeScript(CLICKARGUMENT, posts);
-//
-//        WebElement result = (new WebDriverWait(chromeDriverFb, 15))
-//                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(),'" + POSTTEXT + "')]")));
 
 ////-----------------------Löschen---------------------------------------------------------------------------
 
-//        deletePost(chromeDriverFb);
+    deletePost(driver);
   }
 
-  private void deletePost(ChromeDriver chromeDriverFb) {
-    List<WebElement> deleteResultMenu = (new WebDriverWait(chromeDriverFb, 30))
-//                .until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//*[contains(@data-testid,'post_chevron_button')]")));
-      .until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//*[contains(@aria-label='Story-Optionen'))]")));
+  private void deletePost(ChromeDriver chromeDriver) {
 
-    for (WebElement resultMenu : deleteResultMenu) {
-      chromeDriverFb.executeScript(CLICKARGUMENT, resultMenu);
-      resultMenu.click();
+    WebElement postOptions = (new WebDriverWait(chromeDriver, 10))
+      .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[contains(text(),'Beitragsoptionen')]")));
+    chromeDriver.executeScript(CLICKARGUMENT, postOptions);
 
-      WebElement delete = (new WebDriverWait(chromeDriverFb, 10))
-        .until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'Von der Seite entfernen')]")));
-      chromeDriverFb.executeScript(CLICKARGUMENT, delete);
-      delete.click();
+    WebElement markAll = (new WebDriverWait(chromeDriver, 10))
+      .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class='_2pi9 _4h2r']//button[@class='_1gcq _29c- _1gco _5e9w']")));
+    chromeDriver.executeScript(CLICKARGUMENT, markAll);
 
-      WebElement deleteFinally = (new WebDriverWait(chromeDriverFb, 20))
-        .until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@name='ok']")));
-      chromeDriverFb.executeScript(CLICKARGUMENT, deleteFinally);
-      deleteFinally.click();
-      System.out.println("Post gelöscht!");
-    }
+    WebElement actions = (new WebDriverWait(chromeDriver, 10))
+      .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(),'Handlungen')]")));
+    chromeDriver.executeScript(CLICKARGUMENT, actions);
+
+    WebElement delete = (new WebDriverWait(chromeDriver, 10))
+      .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(text(),'Löschen')]")));
+    chromeDriver.executeScript(CLICKARGUMENT, delete);
+
+    WebElement permanentdelete = (new WebDriverWait(chromeDriver, 10))
+      .until(ExpectedConditions.presenceOfElementLocated(By.linkText("Löschen")));
+    chromeDriver.executeScript(CLICKARGUMENT, permanentdelete);
   }
 
   private ChromeOptions setChromeOptions() {
