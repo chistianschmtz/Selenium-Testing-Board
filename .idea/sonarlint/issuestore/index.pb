@@ -3,8 +3,6 @@
 ..idea/artifacts/Selenium_Testing_Board_jar.xml,a\d\ad6a4d532831912b95bf2c33f19582ee9e34290d
 7
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
-a
-1src/test/java/testing_board/DiricoChromeTest.java,1\f\1f46a32f43145d810c9765d883fbf51c26a3375c
 p
 @.idea/libraries/Maven__com_google_code_findbugs_jsr305_1_3_9.xml,d\f\dfb58492b3bd088817487467abbbdf7649e06cbb
 ~
@@ -21,18 +19,10 @@ j
 :.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_8_15.xml,c\a\ca951ac2a5aeed6acc1374889afe4fea71059c46
 n
 >.idea/libraries/Maven__org_apache_commons_commons_exec_1_3.xml,8\4\84135a5d7f37e289bab3e80b2fce9448279e0a07
-p
-@.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_0_0.xml,d\5\d573492e91c6dc79296fed8d76b0037f758b777e
 y
 I.idea/libraries/Maven__org_checkerframework_checker_compat_qual_2_0_0.xml,1\c\1cded608122cd7bc17309cd81adf718e47ecd02a
 |
 L.idea/libraries/Maven__org_codehaus_mojo_animal_sniffer_annotations_1_14.xml,1\5\1523e26b366c694a68d6d2a539aabe61cdac77eb
-t
-D.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_1_0.xml,5\5\55d1b6f68cf3020630d902045b2ff1fb76e10096
-z
-J.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_1_0.xml,9\0\90c64be0c7c58fb1086e6ae3438eaf8b5e258a33
-j
-:.idea/libraries/Maven__org_opentest4j_opentest4j_1_0_0.xml,4\0\40a5ce58c7bffadde1a7222e56c7488e54f6b1ef
 x
 H.idea/libraries/Maven__org_seleniumhq_selenium_selenium_api_3_141_59.xml,4\a\4a5dc651309ad897cdbf74152e317de354fe64be
 ‚
@@ -59,8 +49,6 @@ L.idea/libraries/Maven__org_seleniumhq_selenium_selenium_support_3_141_59.xml,f
 libs/NOTICE,e\7\e73b08dcb8677408645aaefa884bc282ceeab6e2
 t
 Dout/production/Selenium-Testing-Board/resources/META-INF/MANIFEST.MF,d\1\d112dbfa35a3662f6c78067ee9456df9326c4b9e
-T
-$target/maven-archiver/pom.properties,5\a\5acbe6c306dee4498a010b1ca2096853e29e16a4
 Š
 Ztarget/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst,a\7\a7fa8b0772ec3c4ca9f2834f568ba1e29fe9750f
 ˆ
@@ -69,3 +57,19 @@ Xtarget/maven-status/maven-compiler-plugin/testCompile/default-testCompile/input
 SeleniumTest.iml,1\6\16e4a4c4f3d375e2fcb17e9d9f72e31c3cba88c3
 >
 libs/CHANGELOG,f\7\f7e3289b7623c99df5994707d7664cceb78267a9
+p
+@.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_0.xml,4\8\482fe248ab09a0c5ea5fe0919a983dada38954e7
+t
+D.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_5_1.xml,1\9\19dee880606df81ae38984ccf1200ae3a5cce819
+w
+G.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_5_1.xml,0\d\0d6f93c62bd87d66cc8ea83748895673dbdc09d6
+z
+J.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_5_1.xml,1\8\18651aced07f731c48acf9d797e9d479642872be
+y
+I.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_5_1.xml,3\4\34c2e804cde9befa6d00f1b73d616e06b9fd8f59
+j
+:.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml,8\5\858474d8d215ec25f84b3be6f80418553ae8d1df
+X
+(src/test/java/tests/TestRunFacebook.java,8\0\807ce5b38984fa3d9283fe46787c8f7355855777
+V
+&src/test/java/tests/TestRunDirico.java,0\0\005ad97940f02ca5d72608fbbcb6c45898e357e5

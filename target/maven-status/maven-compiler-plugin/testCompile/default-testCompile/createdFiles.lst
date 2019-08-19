@@ -1,1 +1,4 @@
-tests\DiricoChromeTest.class
+tests\TestRunDirico$1.class
+tests\TestRunFacebook.class
+tests\TestRunDirico.class
+tests\TestRunFacebook$1.class
